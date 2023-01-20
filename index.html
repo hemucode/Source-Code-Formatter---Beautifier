@@ -25743,7 +25743,7 @@ var config  = {
       "editor": function () {
         var reset = config.storage.read("reset") !== undefined ? config.storage.read("reset") : true;
         if (reset) {
-          fetch("sample.js").then(function (e) {return e.text()}).then(function (e) {
+          fetch("resources/sample.js").then(function (e) {return e.text()}).then(function (e) {
             if (e) {
               config.codemirror.editor.input.setValue(e);
               window.setTimeout(function () {beautifybutton.click()}, 300);
